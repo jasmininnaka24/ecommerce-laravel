@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: PoppinsReg;
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: PoppinsMed;
+  src: url("../fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: PoppinsBold;
+  src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: PoppinsItalic;
+  src: url("../fonts/Poppins/Poppins-Italic.ttf");
+}
+
+
+@font-face {
+  font-family: CGReg;
+  src: url("../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf");
+}
+@font-face {
+  font-family: CGMed;
+  src: url("../fonts/Cormorant_Garamond/CormorantGaramond-Medium.ttf");
+}
+@font-face {
+  font-family: CGBold;
+  src: url("../fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf");
+}
+@font-face {
+  font-family: TimesNewRoman;
+  src: url("../fonts/Times_New_Roman/TimesNewRoman.ttf");
+}
+@font-face {
+  font-family: CGItalic;
+  src: url("../fonts/Cormorant_Garamond/CormorantGaramond-Italic.ttf");
+}
+
+/* All */
+
+*{
+  font-family: 'Quicksand', sans-serif;}
+
+/* fonts in classes */
+.font-reg{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+.font-med{
+  font-family: 'Quicksand', sans-serif;  
+  font-weight: 600;
+}
+.font-bold{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+.font-italic{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.font-cg-reg{
+  font-family: CGReg;
+}
+.font-cg-med{
+  font-family: CGMed;
+}
+.font-cg-bold{
+  font-family: CGBold;
+}
+.font-cg-italic{
+  font-family: CGItalic;
+}
+.font-times {
+  font-family: TimesNewRoman;
+} 
+
+:root{
+  --bgc-primary: #804916;
+  --bgc-dark: #6A5647;
+  --bgc-secondary: #E7DCC6;
+  --bgc-accent: #EFE4CF;
+  --bgc-light: #F2E9D6;
+  --bgc-white: #f0f8ff; 
+
+
+  --text-dark: #222;
+  --text-primary: #804916;
+  --text-semi-dark: #555;
+  --text-light: #F2E9D6;
+}
+
+html {
+  --scrollbarBG: #d7d1d1;
+  --thumbBG: #804916;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+/* background classes */
+.bgc-primary{
+  background: var(--bgc-primary);
+  color: var(--text-light);
+}
+.bgc-dark{
+  background: var(--bgc-dark);
+  color: var(--text-light);
+}
+.bgc-secondary{
+  background: var(--bgc-secondary);
+}
+.bgc-accent{
+  background: var(--bgc-accent);
+}
+.bgc-light{
+  background: var(--bgc-light);
+}
+.bgc-white{
+  background: var(--bgc-white);
+}
+.btn:hover, .btn:focus, .btn:active{
+  background: var(--bgc-accent);
+  color: var(--text-primary);
+  border: var(--bgc-primary) 1px solid;
+}
+
+/* text classes */
+.txt-primary{
+  color: var(--text-primary);
+}
+.txt-dark{
+  color: var(--text-dark);
+}
+.txt-tan{
+  color: var(--text-tan);
+}
+.txt-semi-dark{
+  color: var(--text-semi-dark);
+}
+.txt-light{
+  color: var(--text-light);
+}
+
+
+/* animations */
+.anim-to-top-slow{
+  animation: slideFromBottom 1s ease;
+}
+.anim-to-bottom-slow{
+  animation: slideFromTop 1s ease;
+}
+.anim-to-right-slow{
+  animation: slideFromLeft 1s ease;
+}
+.anim-to-left-slow{
+  animation: slideFromRight 2.5s ease;
+}
+.anim-to-top{
+  animation: slideFromBottom .5s ease;
+}
+.anim-to-bottom{
+  animation: slideFromTop .5s ease;
+}
+.anim-to-right{
+  animation: slideFromLeft .5s ease;
+}
+.anim-to-left{
+  animation: slideFromRight .5s ease;
+}
+.animateInfinite{
+  animation: animateInfinite 6s ease;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-iteration-count: infinite;
+}
+
+*{
+  font-family: TimesNewRoman;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-primary);
+}
+a:hover, .a:hover, .a:focus, .a:active{
+  text-decoration: none;
+  color: var(--text-primary);
+}
+ul{
+  list-style-type: none;
+}
+
+.input {
+  background: var(--bgc-primary);
+  color: var(--text-light);
+}
+.input::placeholder {
+  color: #fff;
+}
+.input:hover,
+.input:focus {
+  background: var(--bgc-light);
+}
+
+.reg-input{
+  border: #804916 2px solid;
+  height: 2.5rem;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.reg-input::placeholder {
+  background: var(--text-light);
+  color: #804916;
+}
+.reg-input:hover,
+.reg-input:focus  {
+  background: var(--bgc-light);
+  transition: all .5s ease;
+}
+
+.overlay{
+  top: 0;
+  left: 0;
+  height: 150%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 0;
+  backdrop-filter: blur(3px);
+}
+.modals{
+  position: absolute;
+  left: 36%;
+  top: 27.5%;
+  background: rgb(255, 255, 255);
+  padding: 1 .5rem;
+  border-radius: .5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 30%;
+  min-height: 20rem;
+  display: block;
+  z-index: 200;
+}
+.close-modal{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  border: none;
+  border-radius: 100px;
+  background: none;
+  outline: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: 600;
+}
+.hidden{
+  display: none;
+}
+
+.invalid_modal_container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+
+}
+.invalid_modal{
+  max-width: 90%;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1rem 3rem;
+  min-width: 50%;
+  min-height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  margin: auto;
+  z-index: 2;
+  text-align: center;
+}
+.activities_modal_container{
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  /* margin-top: 0; */
+  width: 100%;
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 1; */
+}
+.activities_modal{
+  max-width: 90%;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1rem 3rem;
+  width: 50%;
+  min-height: 20vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  color: #555;
+  text-align: start;
+  margin: 1rem auto;
+
+  /* border: #555 solid 1px; */
+  box-shadow: 0 3px 8px #999;
+}
+
+/* .double-size {
+  transform: scale(2);
+} */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 2px solid #6c6666;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: #F2E9D6;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '\2713';
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+input[type="checkbox"]:focus {
+  border-color: #804916;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #804916;
+  border-color: #804916;
+}
+
+
+
+
+@media (max-width: 650px){
+  .activities_modal{
+    width: 90%;
+  }
+}
+@media (max-width: 500px){
+  .activities_modal{
+    padding: 1rem .8rem;
+    width: 100%;
+  }
+}
+
+
+
+@keyframes slideFromTop {
+  0%{
+    transform: translateY(-25%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes slideFromLeft {
+  0%{
+    transform: translateX(-25%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes slideFromRight {
+  0%{
+    transform: translateX(25%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes slideFromBottom {
+  0%{
+    transform: translateY(25%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes hiddenState {
+  0% {
+    overflow: hidden;
+  }
+
+  100% {
+    overflow: auto;
+  }
+}
+
+@keyframes animateInfinite {
+  0% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-25%);
+  }
+
+}
+
+
